@@ -22,6 +22,11 @@ class Task extends Model
         'updated_at' => 'datetime',
     ];
 
+    protected $attributes = [
+        'status'   => 'pending',
+        'priority' => 'medium',
+    ];
+
     // Scopes
     public function scopeByStatus(Builder $query, string $status): Builder
     {
